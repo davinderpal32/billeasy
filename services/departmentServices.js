@@ -18,6 +18,6 @@ exports.listofSales = async (data) => {
     })
 }
 
-exports.addSale = async (data) => {
-    return await Db.sales.create(data);
+exports.addDepartment = async (data) => {
+    return await Db.departments.create(data);
 }

@@ -16,11 +16,11 @@ app.use(expressValidator());
 //////////////  Global Parameters   //////////////////////////
 global.appRoot = path.resolve(__dirname);
 
-app.use("/sale", require("./routes/saleRoute"));
-app.use("/user", require("./routes/userRoute"));
+app.use("/department", require("./routes/departmentRoute"));
+app.use("/employee", require("./routes/employeeRoute"));
 
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to bezkoder application." });
+    res.json({ message: "Welcome to bill Easy application." });
 });
 
 // catch 404 and forward to error handler

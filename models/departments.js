@@ -2,7 +2,7 @@
 const Sequelize = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-    const departments = sequelize.define("	departments",
+    const departments = sequelize.define("departments",
         {
             department_id: { type: Sequelize.BIGINT, primaryKey: true, autoIncrement: true },
             department_name: { type: DataTypes.STRING(500), allowNull: false },

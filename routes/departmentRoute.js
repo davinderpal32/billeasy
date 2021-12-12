@@ -5,9 +5,9 @@ const Libs = require(appRoot + "/libs");
 const controllers = require(appRoot + "/controllers");
 
 //API to add data into sales table
-router.post("/addSale", [Libs.middleware.loginInRequired], controllers.saleController.addSale);
+router.post("/add", /*[Libs.middleware.loginInRequired],*/ controllers.departmentController.add);
 
 //API to fetch stats from the sales
-router.get("/salesReport", [Libs.middleware.loginInRequired], controllers.saleController.salesReport);
+router.get("/list", [Libs.middleware.loginInRequired], controllers.departmentController.list);
 
 module.exports = router;

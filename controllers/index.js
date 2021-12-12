@@ -1,4 +1,4 @@
 module.exports = {
-	saleController: require(appRoot + "/controllers/saleController"),
-	userController: require(appRoot + "/controllers/userController")
+	departmentController: require(appRoot + "/controllers/departmentController"),
+	employeeController: require(appRoot + "/controllers/employeeController")
 };
