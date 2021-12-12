@@ -30,14 +30,17 @@ exports.add = async (request, response) => {
 
 exports.list = async (request, response) => {
     try {
-        let data = request.body;
+        let data = request.query;
 
-        request.checkQuery("name", ("name is required")).notEmpty();
+        request.checkQuery("skip", ("skip is required")).notEmpty();
+        request.checkQuery("limit", ("limit is required")).notEmpty();
 
         var errors = request.validationErrors();
         if (errors)
             return response.status(400).json({ success: 0, statusCode: 400, msg: errors[0].msg });
 
+        data.limit = Number(data.limit)
+        data.skip = Number(data.skip)
         //funcion to add sales
         let result = await Services.employeeServices.listofEmployees(data);
 
