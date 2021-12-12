@@ -2,7 +2,7 @@
   "development": {
     "username": "phpmyadmin",
     "password": "codebrew",
-    "database": "salesReport",
+    "database": "billeasy",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
