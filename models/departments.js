@@ -11,5 +11,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
 
+    departments.associate = function (models) {
+        departments.hasMany(models.employees, { foreignKey: "department_id", sourceKey: "department_id", onDelete: "cascade" });
+    }
+
     return departments;
 };

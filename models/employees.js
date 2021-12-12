@@ -14,5 +14,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
 
+    employees.associate = function (models) {
+        employees.belongsTo(models.departments, { foreignKey: "department_id", sourceKey: "department_id", onDelete: "cascade" });
+    }
+
     return employees;
 };
