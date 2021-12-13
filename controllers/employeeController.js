@@ -2,6 +2,7 @@ const Services = require(appRoot + "/services");
 const Db = require(appRoot + "/models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const libs = require("../libs");
 
 
 exports.add = async (request, response) => {
@@ -45,6 +46,28 @@ exports.list = async (request, response) => {
         let result = await Services.employeeServices.listofEmployees(data);
 
         return response.status(200).json({ success: 1, statusCode: 200, msg: "List of Employees", result });
+    }
+    catch (e) {
+        return response.status(500).json({ success: 0, statusCode: 500, msg: e.message });
+    }
+};
+
+exports.permutations = async (request, response) => {
+    try {
+        let data = request.body;
+
+        request.checkBody("S", ("S is required")).notEmpty();
+        request.checkBody("K", ("K is required")).notEmpty();
+
+        var errors = request.validationErrors();
+        if (errors)
+            return response.status(400).json({ success: 0, statusCode: 400, msg: errors[0].msg });
+
+        data.S = data.S.split(',');
+        data.K = parseInt(data.K);
+        let result = await libs.commonFunction.processData(data.K, data.S);
+
+        return response.status(200).json({ success: 1, statusCode: 200, msg: "Sucessfully", result });
     }
     catch (e) {
         return response.status(500).json({ success: 0, statusCode: 500, msg: e.message });
