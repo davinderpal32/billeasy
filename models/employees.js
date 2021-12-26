@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
             salary: { type: Sequelize.BIGINT, allowNull: true },
             joining_date: { type: DataTypes.DATE, allowNull: true },
             blocked: { type: DataTypes.ENUM("0", "1"), allowNull: false, defaultValue: "0" }
+        }, {
+            timestamps: true
         }
     );
 
