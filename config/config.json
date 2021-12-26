@@ -3,7 +3,7 @@
     "username": "qjlruactgsdaqf",
     "password": "c3c87b26b06f7ca5cff8cf51edd030c43da02583353c74fe60a561b6a9e7c882",
     "database": "da6891pphblpvv",
-    "host": "localhost",
+    "host": "ec2-3-214-4-239.compute-1.amazonaws.com",
     "port":5432,
     "dialect": "postgres"
   },
@@ -11,7 +11,7 @@
     "username": "qjlruactgsdaqf",
     "password": "c3c87b26b06f7ca5cff8cf51edd030c43da02583353c74fe60a561b6a9e7c882",
     "database": "da6891pphblpvv",
-    "host": "localhost",
+    "host": "ec2-3-214-4-239.compute-1.amazonaws.com",
     "port":5432,
     "dialect": "postgres"
   },
@@ -19,7 +19,7 @@
     "username": "qjlruactgsdaqf",
     "password": "c3c87b26b06f7ca5cff8cf51edd030c43da02583353c74fe60a561b6a9e7c882",
     "database": "da6891pphblpvv",
-    "host": "localhost",
+    "host": "ec2-3-214-4-239.compute-1.amazonaws.com",
     "port":5432,
     "dialect": "postgres"
   }
