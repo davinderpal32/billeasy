@@ -1,26 +1,29 @@
 {
   "development": {
-    "username": "qjlruactgsdaqf",
-    "password": "c3c87b26b06f7ca5cff8cf51edd030c43da02583353c74fe60a561b6a9e7c882",
-    "database": "da6891pphblpvv",
-    "host": "ec2-3-214-4-239.compute-1.amazonaws.com",
-    "port":5432,
+    "DATABASE_URL": "postgres://koopellaomkqsc:f91eabe63b96d81b3bfba0d5f3f687e3047e01396d32b43cd27911ba1e07fdb4@ec2-3-228-213-181.compute-1.amazonaws.com:5432/d2caruknt64gb5",
+    "username": "koopellaomkqsc",
+    "password": "f91eabe63b96d81b3bfba0d5f3f687e3047e01396d32b43cd27911ba1e07fdb4",
+    "database": "d2caruknt64gb5",
+    "host": "ec2-3-228-213-181.compute-1.amazonaws.com",
+    "port": 5432,
     "dialect": "postgres"
   },
   "test": {
-    "username": "qjlruactgsdaqf",
-    "password": "c3c87b26b06f7ca5cff8cf51edd030c43da02583353c74fe60a561b6a9e7c882",
-    "database": "da6891pphblpvv",
-    "host": "ec2-3-214-4-239.compute-1.amazonaws.com",
-    "port":5432,
+    "DATABASE_URL": "postgres://koopellaomkqsc:f91eabe63b96d81b3bfba0d5f3f687e3047e01396d32b43cd27911ba1e07fdb4@ec2-3-228-213-181.compute-1.amazonaws.com:5432/d2caruknt64gb5",
+    "username": "koopellaomkqsc",
+    "password": "f91eabe63b96d81b3bfba0d5f3f687e3047e01396d32b43cd27911ba1e07fdb4",
+    "database": "d2caruknt64gb5",
+    "host": "ec2-3-228-213-181.compute-1.amazonaws.com",
+    "port": 5432,
     "dialect": "postgres"
   },
   "production": {
-    "username": "qjlruactgsdaqf",
-    "password": "c3c87b26b06f7ca5cff8cf51edd030c43da02583353c74fe60a561b6a9e7c882",
-    "database": "da6891pphblpvv",
-    "host": "ec2-3-214-4-239.compute-1.amazonaws.com",
-    "port":5432,
+    "DATABASE_URL": "postgres://koopellaomkqsc:f91eabe63b96d81b3bfba0d5f3f687e3047e01396d32b43cd27911ba1e07fdb4@ec2-3-228-213-181.compute-1.amazonaws.com:5432/d2caruknt64gb5",
+    "username": "koopellaomkqsc",
+    "password": "f91eabe63b96d81b3bfba0d5f3f687e3047e01396d32b43cd27911ba1e07fdb4",
+    "database": "d2caruknt64gb5",
+    "host": "ec2-3-228-213-181.compute-1.amazonaws.com",
+    "port": 5432,
     "dialect": "postgres"
   }
 }

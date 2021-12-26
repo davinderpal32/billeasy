@@ -12,12 +12,19 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  console.log('database credetnials>>>>>>>>>.',{
-    database : config.database,
-    username : config.username,
-    password : config.password
+  console.log('database credetnials>>>>>>>>>.', {
+    DATABASE_URL:config.DATABASE_URL,
+    database: config.database,
+    username: config.username,
+    password: config.password
   })
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
+  sequelize = new Sequelize(config.DATABASE_URL, {
+    dialect: 'postgres',
+    protocol: 'postgres',
+    dialectOptions: {
+      ssl: true
+    }
+  });
 }
 
 fs
