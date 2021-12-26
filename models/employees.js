@@ -4,7 +4,7 @@ const Sequelize = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
     const employees = sequelize.define("employees",
         {
-            employee_id: { type: DataTypes.UUID, primaryKey: true, default: sequelize.fn('uuid_generate_v4') },
+            employee_id: { type: Sequelize.BIGINT, primaryKey: true, autoIncrement: true },
             name: { type: DataTypes.STRING(255), allowNull: true },
             email: { type: DataTypes.STRING(255), allowNull: true },
             department_id: { type: DataTypes.BIGINT, allowNull: true },
