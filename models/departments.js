@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
             total_employee: { type: DataTypes.BIGINT, allowNull: false, defaultValue: "0" },
             blocked: { type: DataTypes.ENUM("0", "1"), allowNull: false, defaultValue: "0" }
         }, {
-            timestamps: false
+            timestamps: true
         }
     );
 

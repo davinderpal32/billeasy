@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
             joining_date: { type: DataTypes.DATE, allowNull: true },
             blocked: { type: DataTypes.ENUM("0", "1"), allowNull: false, defaultValue: "0" }
         }, {
-            timestamps: false
+            timestamps: true
         }
     );
 
