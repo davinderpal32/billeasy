@@ -1,2 +1,2 @@
-CREATE TRIGGER `department_total_employee` BEFORE INSERT ON `employees`
- FOR EACH ROW UPDATE departments SET `total_employee` = total_employee+1 WHERE `department_id` = NEW.`department_id`
+CREATE FUNCTION emp_stamp() RETURNS trigger AS $emp_stamp$ BEGIN update departments set total_employee = total_employee+1 where department_id = NEW.department_id; RETURN NULL; END; $emp_stamp$ LANGUAGE plpgsql;
+CREATE TRIGGER department_total_employee BEFORE INSERT ON employees FOR EACH ROW EXECUTE PROCEDURE emp_stamp();
