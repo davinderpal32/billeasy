@@ -8,6 +8,6 @@ const controllers = require(appRoot + "/controllers");
 router.post("/add", /*[Libs.middleware.loginInRequired],*/ controllers.departmentController.add);
 
 //API to fetch stats from the sales
-router.get("/list", [Libs.middleware.loginInRequired], controllers.departmentController.list);
+router.get("/list", /*[Libs.middleware.loginInRequired],*/ controllers.departmentController.list);
 
 module.exports = router;
