@@ -5,17 +5,15 @@ const Op = Sequelize.Op;
 
 const Db = require(appRoot + "/models");
 
-exports.listofSales = async (data) => {
-    return Db.sales.findAll({
-        where: {
-            user_id: data.user_id,
-            blocked: "0",
-            sale_on: {
-                [Op.between]: [data.start_dt, data.end_dt]
-            }
-        },
-        order: [["updatedAt", "DESC"]]
-    })
+exports.listofDepartments = async (data) => {
+    let where = {
+        blocked: "0"
+    }
+    return Db.departments.findAll({
+        where: where,
+        limit: data.limit,
+        offset: data.skip
+    });
 }
 
 exports.addDepartment = async (data) => {
